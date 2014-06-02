@@ -12,7 +12,7 @@ public class TestString {
 		s2.isEmpty();
 		
 		if(s2.equals(s)){
-			
+			//some new comment
 		}
 		char c = s.charAt(0);
 		System.out.println(c);
