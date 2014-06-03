@@ -14,7 +14,6 @@ public class Week1Methods {
 			}
 		}
 		return simple;
-		
 	}
 	
 	public static int countTrico(int[] mas){
