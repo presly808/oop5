@@ -8,6 +8,13 @@ public class Car {
 	double weight;
 	boolean fixed;
 
+	public Car(String model, int year, String color, double weight){
+		this.model = model;
+		this.year = year;
+		this.color = color;
+		this.weight = weight;
+	}
+	
 	public void drive(int speed) {
 		if (!fixed) {
 			System.out.println("Car is broken");
@@ -25,10 +32,6 @@ public class Car {
 	public void fix(){
 		fixed = true;
 	}
-	
-	public static void someAction(){
-		
-		System.out.println("Static method");
-	}
+
 
 }
