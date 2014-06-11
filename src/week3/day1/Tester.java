@@ -15,5 +15,12 @@ public class Tester extends Worker {
 	public void foo(){
 		super.setAge(22);
 	}
+
+	@Override
+	public String toString() {
+		return super.toString() + ", type=" + type;
+	}
+	
+	
 	
 }
