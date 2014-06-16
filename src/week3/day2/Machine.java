@@ -6,6 +6,18 @@ public class Machine {
 	
 	private String model;
 	
+	
+	
+	public Machine() {
+		super();
+	}
+
+	public Machine(double weight, String model) {
+		super();
+		this.weight = weight;
+		this.model = model;
+	}
+
 	public double getWeight() {
 		return weight;
 	}
@@ -25,5 +37,12 @@ public class Machine {
 	public void go(){
 		System.out.println("Machine is moving");
 	}
+
+	@Override
+	public String toString() {
+		return "Machine [weight=" + weight + ", model=" + model + "]";
+	}
+	
+	
 		
 }
