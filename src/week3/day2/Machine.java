@@ -1,6 +1,6 @@
 package week3.day2;
 
-public class Machine {
+public class Machine implements Comparable {
 	
 	private double weight;
 	
@@ -41,6 +41,23 @@ public class Machine {
 	@Override
 	public String toString() {
 		return "Machine [weight=" + weight + ", model=" + model + "]";
+	}
+
+	@Override
+	public int compareTo(Object o) {
+		Machine m = (Machine) o;
+		
+		// example ternary by using if - else statement
+		/*if(this.weight < m.weight) {
+			return -1;
+		} else if(this.weight > m.weight){
+			return 1;
+ 		} else {
+ 			return 0;
+ 		}*/
+		
+		//ternary operator
+		return this.weight < m.weight ? -1 : this.weight > m.weight ? 1 : 0;
 	}
 	
 	
