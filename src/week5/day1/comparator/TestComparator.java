@@ -5,6 +5,8 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 
+import week5.day1.SelectionSorter;
+
 public class TestComparator {
 
 	public static void main(String[] args) throws ParseException {
@@ -17,12 +19,14 @@ public class TestComparator {
 		clients[2] = new Client("Serg", sdf.parse("11/02/1985"));
 		clients[3] = new Client("Nika", sdf.parse("16/01/1966"));
 		
+		NullPointerException npe = new NullPointerException();
 		
 		System.out.println(Arrays.toString(clients));
 		ClientNameComparator com = new ClientNameComparator();
 		
-		Arrays.sort(clients, com);
+		//Arrays.sort(clients, com);
 		
+		SelectionSorter.sortObj(clients, null);		
 		System.out.println(Arrays.toString(clients));
 	}
 }
