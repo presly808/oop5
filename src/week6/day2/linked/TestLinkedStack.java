@@ -6,14 +6,20 @@ public class TestLinkedStack {
 
 	public static void main(String[] args) {
 
-		LinkedStack<Cherry> ls = new LinkedStack<Cherry>();
+		LinkedStack<String> ls = new LinkedStack<String>();
 
-		System.out.println(ls.pop());
-		System.out.println(ls.pop());
-		System.out.println(ls.pop());
-		System.out.println(ls.pop());
+		ls.push("Vania");
+		ls.push("Kolia");
+		ls.push("Alisa");
+		ls.push("Inna");
 
 		sortStack(ls);
+		
+		System.out.println(ls.pop());
+		System.out.println(ls.pop());
+		System.out.println(ls.pop());
+		System.out.println(ls.pop());
+
 
 	}
 
