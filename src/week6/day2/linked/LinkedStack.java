@@ -1,8 +1,10 @@
 package week6.day2.linked;
 
+import java.util.Iterator;
+
 import week5.day2.struct.IStack;
 
-public class LinkedStack<E> implements IStack<E> {
+public class LinkedStack<E> implements IStack<E>, Iterable {
 
 	private Node top;
 
@@ -43,6 +45,39 @@ public class LinkedStack<E> implements IStack<E> {
 			top = top.next;
 			return nodeForReturn.value;
 		}
+	}
+	
+	
+	
+	@Override
+	public Iterator iterator() {
+		return new LinkedStackIterator();
+	}
+
+
+
+	private class LinkedStackIterator implements Iterator {
+
+		private Node iterNode = top;
+		
+		@Override
+		public boolean hasNext() {
+			return iterNode != null;
+		}
+
+		@Override
+		public Object next() {
+			E value = iterNode.value;
+			iterNode = iterNode.next;// 
+			return value;
+		}
+
+		@Override
+		public void remove() {
+			throw new UnsupportedOperationException();
+		}
+		
+		
 	}
 
 }
