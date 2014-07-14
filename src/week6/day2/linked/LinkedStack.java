@@ -54,8 +54,6 @@ public class LinkedStack<E> implements IStack<E>, Iterable {
 		return new LinkedStackIterator();
 	}
 
-
-
 	private class LinkedStackIterator implements Iterator {
 
 		private Node iterNode = top;
@@ -76,8 +74,6 @@ public class LinkedStack<E> implements IStack<E>, Iterable {
 		public void remove() {
 			throw new UnsupportedOperationException();
 		}
-		
-		
 	}
 
 }
